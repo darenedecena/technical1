@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column; /* Ensure a vertical layout */
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px; /* Add margin to separate the header and button */
+    }
+
+    button {
+  background-color: #fddde6;
+  color: black;
+  padding: 20px 16px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-right: 20px; /* Adjust the right margin as needed */
+}
+
+    header {
+      background-color: #ffe4e1;
+      color: black;
+      padding: 10px;
+      text-align: left;
+      width: 100%;
+      position: relative; /* Make the header a positioned container */
+    }
+
+    .profile-image {
+      width: 200px;
+      height: auto;
+      position: absolute; /* Position the image absolutely within the header */
+      top: 10px; /* Adjust the top position to control the distance from the top */
+      right: 10px; /* Adjust the right position to control the distance from the right */
+    }
+
+    .header-content {
+      padding-right: 70px;
+    }
+
+    #resume-container {
+      max-width: 650px;
+      margin-top: 0; /* Remove the top margin */
+      margin-left: auto; /* Move the section to the right */
+      margin-right: 0; /* Ensure no margin on the right */
+    }
+
+    .academic-info {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left-column,
+    .right-column {
+      flex: 1;
+    }
+
+    .level {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-container">
+    <button onclick="changeColor()">Change Color</button>
+    <header>
+      <div class="header-content">
+        <h1>Darene Chiena O. Decena</h1>
+        <p>Address: Antipolo City, Philippines</p>
+        <p>Contact No. +63 9171184733</p>
+        <p>Email: decenadarene@gmail.com</p>
+      </div>
+      <img src="C:\Users\Decena\Downloads\373488226_1563955031010406_2071166144828487785_n.jpg" alt="Your Image" class="profile-image">
+    </header>
+  </div>
+
+  <section id="resume-container">
+    <h2>Objective</h2>
+    <p>Applying best practice in programming and proper folder and naming conventions.
+      (Everything must be organized and proper, like usage of external files applying other
+      best practices for Design and Programming must be used at all).</p>
+
+    <h2>Academic Background</h2>
+    <div class="academic-info">
+      <div class="left-column">
+        <p>Grade School<br><br>
+          University Name, Graduation Year</p>
+      </div>
+      <div class="right-column">
+        <div class="level">stella maris college</div>
+        <br> <div class="level">Far Eastern University</div>
+      </div>
+    </div>
+
+    <h2>Skills</h2>
+    <ul>
+      <li>Programming</li>
+      <li>Visual Thinking</li>
+      <li>Problem Solver</li>
+    </ul>
+  </section>
+
+  <script>
+    function changeColor() {
+      document.body.style.backgroundColor = getRandomColor();
+    }
+
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+
+</body>
+</html>
